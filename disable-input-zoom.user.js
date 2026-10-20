@@ -1,62 +1,46 @@
 // ==UserScript==
 // @name         禁用输入框自动缩放
 // @namespace    http://tampermonkey.net/
-// @description  适配 Safari 页面缩放，防止点击输入框时自动放大
+// @version      1.0
+// @description  防止 Safari 移动端点击输入框时自动放大页面
 // @match        *://*/*
-// @run-at       document-start
+// @run-at       document-end
 // @grant        none
 // ==/UserScript==
 
 (function () {
   'use strict';
 
-  const PAGE_ZOOM = 0.5;   // 你的 Safari 页面缩放比例，50% 就填 0.5
-  const DEBUG = false;     // 改成 true 会在页面右上角闪一个"已运行"标记
-  const MIN_PX = 16 / PAGE_ZOOM; // 需要达到的 CSS 字号，50% 时为 32px
-  const SEL = 'input, textarea, select';
-  const SKIP = '.cm-editor, [contenteditable]'; // 代码编辑器等富文本区域不处理
-
-  function apply(el) {
-    try {
-      if (el.closest(SKIP)) return;
-      if (parseFloat(getComputedStyle(el).fontSize) < MIN_PX) {
-        el.style.setProperty('font-size', MIN_PX + 'px', 'important');
+  function fixViewport() {
+    let meta = document.querySelector('meta[name="viewport"]');
+    if (meta) {
+      if (!meta.content.includes('maximum-scale')) {
+        meta.content = meta.content + ', maximum-scale=1.0, user-scalable=no';
       }
-    } catch (e) {}
+    } else if (document.head) {
+      meta = document.createElement('meta');
+      meta.name = 'viewport';
+      meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';
+      document.head.appendChild(meta);
+    }
   }
 
-  try {
-    const sheet = new CSSStyleSheet();
-    sheet.replaceSync(
-      'input:not(.cm-editor *):not([contenteditable] *), ' +
-      'textarea:not(.cm-editor *):not([contenteditable] *), ' +
-      'select:not(.cm-editor *):not([contenteditable] *) ' +
-      '{ font-size: ' + MIN_PX + 'px !important; }'
-    );
-    document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet];
-  } catch (e) {}
+  // 页面加载完成后先修一次
+  fixViewport();
 
-  new MutationObserver((list) => {
-    list.forEach((m) => m.addedNodes.forEach((n) => {
-      if (n.nodeType !== 1) return;
-      if (n.matches(SEL)) apply(n);
-      n.querySelectorAll(SEL).forEach(apply);
-    }));
-  }).observe(document.documentElement, { childList: true, subtree: true });
-
-  document.addEventListener('touchstart', (e) => {
-    const t = e.target;
-    if (t && t.matches && t.matches(SEL)) apply(t);
-  }, true);
-
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll(SEL).forEach(apply);
-    if (DEBUG) {
-      const d = document.createElement('div');
-      d.textContent = '✓ 防缩放脚本已运行';
-      d.style.cssText = 'position:fixed;top:60px;right:8px;z-index:2147483647;background:#1a7f37;color:#fff;padding:4px 8px;border-radius:6px;font:12px sans-serif;';
-      document.body.appendChild(d);
-      setTimeout(() => d.remove(), 3000);
-    }
+  // 监听 DOM 变化，防止 SPA 站点（如 GitHub）动态改写 viewport
+  const observer = new MutationObserver(() => fixViewport());
+  observer.observe(document.documentElement, {
+    childList: true,
+    subtree: true,
   });
+
+  // 兜底：强制所有 input/textarea 字体不小于16px，防止 iOS 触发自动放大
+  const style = document.createElement('style');
+  style.textContent = `
+    input, textarea, select {
+      font-size: 16px !important;
+    }
+  `;
+  (document.head || document.documentElement).appendChild(style);
 })();
