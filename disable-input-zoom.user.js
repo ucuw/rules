@@ -11,12 +11,14 @@
   'use strict';
 
   const PAGE_ZOOM = 0.5;   // 你的 Safari 页面缩放比例，50% 就填 0.5
-  const DEBUG = true;      // 确认生效后改成 false
+  const DEBUG = false;     // 改成 true 会在页面右上角闪一个"已运行"标记
   const MIN_PX = 16 / PAGE_ZOOM; // 需要达到的 CSS 字号，50% 时为 32px
-  const SEL = 'input, textarea, select, [contenteditable]';
+  const SEL = 'input, textarea, select';
+  const SKIP = '.cm-editor, [contenteditable]'; // 代码编辑器等富文本区域不处理
 
   function apply(el) {
     try {
+      if (el.closest(SKIP)) return;
       if (parseFloat(getComputedStyle(el).fontSize) < MIN_PX) {
         el.style.setProperty('font-size', MIN_PX + 'px', 'important');
       }
@@ -26,7 +28,10 @@
   try {
     const sheet = new CSSStyleSheet();
     sheet.replaceSync(
-      'input, textarea, select { font-size: ' + MIN_PX + 'px !important; }'
+      'input:not(.cm-editor *):not([contenteditable] *), ' +
+      'textarea:not(.cm-editor *):not([contenteditable] *), ' +
+      'select:not(.cm-editor *):not([contenteditable] *) ' +
+      '{ font-size: ' + MIN_PX + 'px !important; }'
     );
     document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet];
   } catch (e) {}
