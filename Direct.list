@@ -7,7 +7,8 @@ DOMAIN-KEYWORD,citic
 DOMAIN-KEYWORD,mzstatic
 DOMAIN-KEYWORD,stripe
 DOMAIN-KEYWORD,app-analytics
-
+DOMAIN-SUFFIX,api.palera.in
+DOMAIN-SUFFIX,ipadn.localtest.me
 
 # 汽水音乐 & 字节跳动系
 DOMAIN-SUFFIX,douyin.com
