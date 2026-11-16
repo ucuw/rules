@@ -9,8 +9,8 @@ DOMAIN-SUFFIX,api.palera.in
 DOMAIN-SUFFIX,ipadn.localtest.me
 DOMAIN-SUFFIX,guzzoni.apple.com
 DOMAIN-SUFFIX,siri.apple.com
-DOMAIN,dejavu.apple.com
-DOMAIN,sequoia.apple.com
+DOMAIN-SUFFIX,dejavu.apple.com
+DOMAIN-SUFFIX,sequoia.apple.com
 DOMAIN-SUFFIX,smoot.apple.com
 # 汽水音乐 & 字节跳动系
 DOMAIN-SUFFIX,douyin.com
