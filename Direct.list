@@ -1,6 +1,16 @@
 #直连
+DOMAIN-KEYWORD,apple
+DOMAIN-KEYWORD,icloud
 DOMAIN-KEYWORD,citic
 DOMAIN-KEYWORD,mzstatic
+
+# Apple智能siri
+DOMAIN-KEYWORD,siri.apple.com
+DOMAIN-KEYWORD,smoot.apple.com
+DOMAIN-KEYWORD,dejavu.apple.com
+DOMAIN-KEYWORD,guzzoni.apple.com
+DOMAIN-KEYWORD,sequoia.apple.com
+
 # 汽水音乐 & 字节跳动系
 DOMAIN-SUFFIX,douyin.com
 DOMAIN-SUFFIX,ibytedapm.com
