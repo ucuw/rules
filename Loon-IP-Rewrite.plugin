@@ -1,5 +1,6 @@
 #!name = Loon-IP-Rewrite
 #!desc = LocalDevVPN本地回环
+#!icon = https://raw.githubusercontent.com/ucuw/icon/main/LocalDevVPN.png
 
 [IP Rewrite]
 10.7.0.1 = reflect
