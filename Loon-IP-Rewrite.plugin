@@ -1,5 +1,5 @@
 #!name = Loon-IP-Rewrite
-#!desc = 替代LocalDevVPN本地回环
+#!desc = LocalDevVPN本地回环
 
 [IP Rewrite]
 10.7.0.1 = reflect
