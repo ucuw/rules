@@ -1,9 +1,10 @@
-#!name = Loon-IP-Rewrite
-#!desc = LocalDevVPN本地回环
+#!name = Loon-LocalLoopback
+#!desc = 用于替代LocalDevVPN
 #!icon = https://raw.githubusercontent.com/ucuw/icon/main/LocalDevVPN.png
 
 [General]
 include-tun = 10.7.0.1/32
+ipv6-vif = off
 
 [IP Rewrite]
 10.7.0.1 = reflect
