@@ -2,5 +2,8 @@
 #!desc = LocalDevVPN本地回环
 #!icon = https://raw.githubusercontent.com/ucuw/icon/main/LocalDevVPN.png
 
+[General]
+include-tun = 10.7.0.1/32
+
 [IP Rewrite]
 10.7.0.1 = reflect
