@@ -1,5 +1,5 @@
 #!name = Loon-LocalLoopback
-#!desc = 用于替代LocalDevVPN
+#!desc=无需开启 LocalDevVPN，即可让 SideStore 等应用直接使用本机回环（10.7.0.1），需 Loon 3.5.3 及以上版本
 #!icon = https://raw.githubusercontent.com/ucuw/icon/main/LocalDevVPN.png
 
 [General]
