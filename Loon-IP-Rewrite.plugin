@@ -1,0 +1,5 @@
+#!name = Loon-IP-Rewrite
+#!desc = SideStore IP 回环规则
+
+[IP Rewrite]
+10.7.0.1 = reflect
