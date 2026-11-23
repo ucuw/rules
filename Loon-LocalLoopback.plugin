@@ -1,11 +1,12 @@
-#!name = Loon-LocalLoopback
+#!name=本机开发服务回环
+#!loon_version = 3.5.3（1007）
 #!desc=无需开启 LocalDevVPN，即可让 SideStore 等应用直接使用本机回环（10.7.0.1），需Loon 3.5.3 及以上版本
-#!openUrl=https://apps.apple.com/app/id6755608044
 #!icon = https://raw.githubusercontent.com/ucuw/icon/main/LocalDevVPN.png
+#!openUrl=https://apps.apple.com/app/id6755608044
 
 [General]
-include-tun = 10.7.0.1/32
 ipv6-vif = off
+include-tun = 10.7.0.1/32
 
 [IP Rewrite]
 10.7.0.1 = reflect
