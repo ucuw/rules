@@ -1,0 +1,20 @@
+no_resolve: true
+domain_keyword_set:
+  - youtube
+  - googleapis
+domain_suffix_set:
+  - googlevideo.com
+  - ggpht.com
+  - ggpht.cn
+  - gvt1.com
+  - gvt2.com
+  - video.google.com
+  - wide-youtube.l.google.com
+  - ytimg.com
+user_agent_set:
+  - youtube
+ip_cidr_set:
+  - 172.110.32.0/21
+  - 216.73.80.0/20
+ip_cidr6_set:
+  - 2620:120:e000::/40
