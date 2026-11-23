@@ -1,0 +1,15 @@
+domain_keyword_set:
+  - mask-api.fe.apple-dns.net
+  - mask-api.icloud.com
+  - mask-canary.icloud.com
+  - mask-h2.icloud.com
+  - mask-t.apple-dns.net
+  - mask.apple-dns.net
+  - mask.icloud.com
+  - apple-relay
+  - gspe1-ssl.ls.apple.com
+  - app.apple.com
+  - ropes.apple.com
+  - issuer.apple.com
+  - cp4.cloudflare.com
+  - imap.mail.icloud.com
