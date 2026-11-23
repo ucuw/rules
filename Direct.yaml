@@ -1,0 +1,45 @@
+domain_keyword_set:
+  # 直连
+  - apple
+  - icloud
+  - citic
+  - mzstatic
+  - oracle
+  - ipadn.localtest.me
+  - api.palera.in
+  # Apple智能siri
+  - siri.apple.com
+  - smoot.apple.com
+  - dejavu.apple.com
+  - guzzoni.apple.com
+  - sequoia.apple.com
+domain_suffix_set:
+  # 汽水音乐 & 字节跳动系
+  - douyin.com
+  - ibytedapm.com
+  - ibyteimg.com
+  - pstatp.com
+  - qishui.cn
+  - qishui.com
+  - snssdk.com
+  - sodamusic.cn
+  - sodamusic.com
+  - zijieapi.com
+  - bytegecko.com
+  - byteimg.com
+  - byteoversea.com
+  - byteoversea.net
+  - toutiaovod.com
+  - volccdn.com
+  - volces.com
+  # 淘宝闪购 & 阿里系基础设施
+  - alicdn.com
+  - alipay.com
+  - amap.com
+  - ele.me
+  - elemecdn.com
+  - mmstat.com
+  - taobao.com
+  - tb.cn
+  - tbcache.com
+  - tmall.com
