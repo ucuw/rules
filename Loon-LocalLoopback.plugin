@@ -5,7 +5,7 @@
 
 [General]
 ipv6-vif = off
-include-tun = 10.7.0.1/32
+include-tun = 10.7.0.1/16
 
 [IP Rewrite]
 10.7.0.1 = reflect
