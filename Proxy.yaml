@@ -1,0 +1,36 @@
+domain_set:
+  - stun.miwifi.com
+  - stun.hitv.com
+  - stun.chat.bilibili.com
+  - cf.999831.xyz
+  - api.123169.xyz
+  - i.111666.best
+domain_suffix_set:
+  - browserleaks.com
+  - ipleak.net
+  - whoer.net
+  - whatismyipaddress.com
+  - myip.com
+  - ip.me
+  - 2ip.io
+  - dnsleaktest.com
+  - ipcheck.ing
+  - ipinfo.io
+  - ipapi.is
+  - ip2location.io
+  - ip.sb
+  - ipify.org
+  - ifconfig.me
+  - icanhazip.com
+  - ip-api.com
+  - ipapi.co
+  - ipwho.is
+  - ipdata.co
+  - ident.me
+  - ping0.cc
+  - ippure.com
+  - scamalytics.com
+  - test-ipv6.com
+  - checkip.amazonaws.com
+  - ipip.net
+  - xyz
