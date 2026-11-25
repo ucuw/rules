@@ -1,3 +1,5 @@
+DOMAIN-SUFFIX,xyz
+DOMAIN-SUFFIX,myip.anapps.studio
 DOMAIN-SUFFIX,browserleaks.com
 DOMAIN-SUFFIX,ipleak.net
 DOMAIN-SUFFIX,whoer.net
@@ -31,4 +33,3 @@ DOMAIN,stun.chat.bilibili.com
 DOMAIN,cf.999831.xyz
 DOMAIN,api.123169.xyz
 DOMAIN,i.111666.best
-DOMAIN-SUFFIX,xyz
