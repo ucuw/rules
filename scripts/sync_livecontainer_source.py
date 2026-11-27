@@ -114,6 +114,24 @@ def main():
                 found = source.get("apps") or []
                 if not found:
                     raise ValueError("source JSON contains no apps")
+                # LiveContainer does not support app extensions. Use iPadn's
+                # official Lite IPA for its latest version (without widgets/live activities).
+                if repo == "mengangs/ipadn":
+                    for app in found:
+                        latest = str(app.get("version", ""))
+                        if latest:
+                            lite_url = f"https://github.com/mengangs/ipadn/releases/download/v{latest}/iPadn-{latest}-lite-unsigned.ipa"
+                            app["downloadURL"] = lite_url
+                            if latest == "2.3.5":
+                                app["size"] = 49971723
+                            for version in app.get("versions", []):
+                                if str(version.get("version", "")) == latest:
+                                    version["downloadURL"] = lite_url
+                                    if latest == "2.3.5":
+                                        version["size"] = 49971723
+                                    note = "LiveContainer compatibility: this source points to the official Lite IPA, which omits app extensions."
+                                    old = version.get("localizedDescription", "")
+                                    version["localizedDescription"] = (old + "\\n\\n" + note).strip()
                 apps.extend(found)
                 print(f"source: {repo}: {len(found)} app(s)")
             else:
