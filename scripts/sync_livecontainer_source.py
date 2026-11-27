@@ -24,7 +24,7 @@ REPOS = [
     {"repo": "kolbicz/WQFiles", "source": "source.json"},
     {"repo": "maow318/seekly-open", "subtitle": "NodeSeek 社区第三方 iOS 客户端", "minOS": "16.0"},
     {"repo": "Kianuni/Camlo", "source": "apps.json"},
-    {"repo": "Rone89/cilicili", "icon": None, "subtitle": "第三方哔哩哔哩 iOS 客户端", "minOS": "26.1"},
+    {"repo": "Rone89/cilicili", "icon": "https://raw.githubusercontent.com/Rone89/cilicili/main/bili/Assets.xcassets/AppIcon.appiconset/cilicili-icon.png", "subtitle": "第三方哔哩哔哩 iOS 客户端", "minOS": "26.1"},
 ]
 
 def request(url, binary=False):
