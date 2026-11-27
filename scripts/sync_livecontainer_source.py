@@ -22,7 +22,7 @@ REPOS = [
     {"repo": "Reukix/Reloc", "icon": "https://raw.githubusercontent.com/Reukix/Reloc/main/docs/icon.png", "subtitle": "iPhone 与 iPad 本机虚拟外设定位模拟工具", "minOS": "17.0"},
     {"repo": "imxieyi/Kernarium", "source": "sideload/source.json"},
     {"repo": "kolbicz/WQFiles", "source": "source.json"},
-    {"repo": "maow318/seekly-open", "icon": "https://raw.githubusercontent.com/ucuw/rules/main/assets/seekly-icon.png", "subtitle": "NodeSeek 社区第三方 iOS 客户端", "minOS": "16.0"},
+    {"repo": "maow318/seekly-open", "icon": "https://raw.githubusercontent.com/ucuw/rules/main/assets/seekly-icon.png?v=2", "subtitle": "NodeSeek 社区第三方 iOS 客户端", "minOS": "16.0"},
     {"repo": "Kianuni/Camlo", "source": "apps.json"},
     {"repo": "Rone89/cilicili", "icon": "https://raw.githubusercontent.com/Rone89/cilicili/main/bili/Assets.xcassets/AppIcon.appiconset/cilicili-icon.png", "subtitle": "第三方哔哩哔哩 iOS 客户端", "minOS": "26.1"},
 ]
