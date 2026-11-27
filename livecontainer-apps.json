@@ -636,7 +636,7 @@
       "versionDescription": "Seekly 5.2 (1)，最低 iOS 16.0。\n\n`Seekly-5.2-unsigned.ipa` 是无签名包，用 TrollStore、AltStore / SideStore、Sideloadly 或自己的证书签名后安装。\n\nSHA-256：\n\n```\nc0c59ccc41a0370fe2e47ee089b0aa7a9c0ad0a9ef832ab4d0e60c5107e82061  Seekly-5.2-unsigned.ipa\n```",
       "downloadURL": "https://github.com/maow318/seekly-open/releases/download/v5.2/Seekly-5.2-unsigned.ipa",
       "size": 2780084,
-      "iconURL": "https://raw.githubusercontent.com/ucuw/rules/main/assets/seekly-icon.svg",
+      "iconURL": "https://raw.githubusercontent.com/ucuw/rules/main/assets/seekly-icon.png",
       "minOSVersion": "16.0"
     },
     {
